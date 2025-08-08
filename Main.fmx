@@ -150,6 +150,7 @@ object formMain: TformMain
         Locked = True
         ShortCut = 12368
         Text = 'Settings'
+        OnClick = menuItemSettingsClick
       end
     end
     object menuItemHelp: TMenuItem

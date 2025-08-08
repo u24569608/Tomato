@@ -1,0 +1,135 @@
+object formSettings: TformSettings
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 176
+  ClientWidth = 273
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 1
+  object S: TTabControl
+    Align = Client
+    Size.Width = 273.000000000000000000
+    Size.Height = 141.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = PlatformDefault
+    Sizes = (
+      273s
+      115s
+      273s
+      115s)
+    object tabItemGeneral: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = True
+      Size.Width = 65.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'General'
+      object checkBoxStaysOnTop: TCheckBox
+        IsChecked = True
+        Position.X = 8.000000000000000000
+        Position.Y = 28.000000000000000000
+        TabOrder = 0
+        Text = 'Stays on Top'
+      end
+      object Label1: TLabel
+        StyledSettings = [Family, FontColor]
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+        Text = 'Window'
+        TabOrder = 1
+      end
+    end
+    object tabItemTimeSettings: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = False
+      Size.Width = 53.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Timer'
+      object labelWorkRestTime: TLabel
+        StyledSettings = [Family, FontColor]
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+        Text = 'Work/Rest Time'
+        TabOrder = 2
+      end
+      object restTime: TTimeEdit
+        Time = 0.010416666666666670
+        TimeFormatKind = Long
+        Position.X = 144.000000000000000000
+        Position.Y = 54.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+      end
+      object workTime: TTimeEdit
+        Time = 0.031250000000000000
+        TimeFormatKind = Long
+        Position.X = 8.000000000000000000
+        Position.Y = 54.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+      end
+      object buttonRestTime: TButton
+        Default = True
+        Position.X = 78.000000000000000000
+        Position.Y = 84.000000000000000000
+        Size.Width = 119.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Reset to Default'
+        TextSettings.Trimming = None
+      end
+      object labelWorkTime: TLabel
+        Position.X = 9.000000000000000000
+        Position.Y = 33.000000000000000000
+        Text = 'Work Time'
+        TabOrder = 8
+      end
+      object labelRestTime: TLabel
+        Position.X = 145.000000000000000000
+        Position.Y = 33.000000000000000000
+        Text = 'Rest Time'
+        TabOrder = 7
+      end
+    end
+  end
+  object panelBottom: TPanel
+    Align = Bottom
+    Position.Y = 141.000000000000000000
+    Size.Width = 273.000000000000000000
+    Size.Height = 35.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object buttonSave: TButton
+      Default = True
+      Position.X = 185.000000000000000000
+      Position.Y = 8.000000000000000000
+      TabOrder = 1
+      Text = 'Save'
+      TextSettings.Trimming = None
+    end
+  end
+end

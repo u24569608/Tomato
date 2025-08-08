@@ -40,6 +40,7 @@ type
     procedure menuItemResetClick(Sender: TObject);
     procedure menuItemStartClick(Sender: TObject);
     procedure menuItemStopClick(Sender: TObject);
+    procedure menuItemSettingsClick(Sender: TObject);
   private
     { Private declarations }
     bWorking : Boolean;
@@ -57,6 +58,8 @@ var
 implementation
 
 {$R *.fmx}
+
+uses Settings;
 
 { TfrmMain }
 
@@ -89,6 +92,12 @@ procedure TformMain.menuItemResetClick(Sender: TObject);
 begin
   // Main Menu: Reset
   Reset();
+end;
+
+procedure TformMain.menuItemSettingsClick(Sender: TObject);
+begin
+  // Settings
+
 end;
 
 procedure TformMain.menuItemStartClick(Sender: TObject);
