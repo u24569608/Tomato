@@ -138,7 +138,36 @@ object formMain: TformMain
     end
   end
   object timerCountdown: TTimer
-    Left = 120
+    Left = 96
     Top = 56
+  end
+  object menuMain: TMainMenu
+    Left = 128
+    Top = 64
+    object menuItemAction: TMenuItem
+      Text = 'Action'
+      object menuItemStart: TMenuItem
+        Locked = True
+        Text = 'menuItemStart'
+      end
+      object menuItemStop: TMenuItem
+        Locked = True
+        Text = 'menuItemStop'
+      end
+      object menuItemReset: TMenuItem
+        Locked = True
+        Text = 'menuItemReset'
+      end
+    end
+    object menuItemSettings: TMenuItem
+      Text = 'Settings'
+    end
+    object menuItemHelp: TMenuItem
+      Text = 'Help'
+      object menuItemAbout: TMenuItem
+        Locked = True
+        Text = 'About'
+      end
+    end
   end
 end

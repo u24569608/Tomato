@@ -7,7 +7,7 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Controls.Presentation, System.Math.Vectors, FMX.Controls3D, FMX.Layers3D,
   FMX.Layouts, FMX.Objects,  Macapi.AppKit, Macapi.ObjectiveC, Macapi.CocoaTypes,
-  Macapi.Foundation, FMX.Platform.Mac;
+  Macapi.Foundation, FMX.Platform.Mac, FMX.Menus;
 
 type
   TformMain = class(TForm)
@@ -24,6 +24,14 @@ type
     labelWork: TLabel;
     circleWork: TCircle;
     timerCountdown: TTimer;
+    menuMain: TMainMenu;
+    menuItemAction: TMenuItem;
+    menuItemSettings: TMenuItem;
+    menuItemHelp: TMenuItem;
+    menuItemAbout: TMenuItem;
+    menuItemStart: TMenuItem;
+    menuItemStop: TMenuItem;
+    menuItemReset: TMenuItem;
     procedure buttonStartClick(Sender: TObject);
     procedure buttonStopClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
