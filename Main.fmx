@@ -1,6 +1,7 @@
-object frmMain: TfrmMain
+object formMain: TformMain
   Left = 0
   Top = 0
+  ActiveControl = buttonStart
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = Single
   Caption = 'Tomato'
@@ -8,15 +9,14 @@ object frmMain: TfrmMain
   ClientWidth = 273
   Fill.Kind = Solid
   Quality = HighQuality
-  StyleBook = StyleBook1
   FormStyle = StayOnTop
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 1
-  object lblTimerText: TLabel
+  object labelTimer: TLabel
     Align = Client
-    StyledSettings = [Family, Style, FontColor]
+    StyledSettings = [Family, Style]
     Size.Width = 273.000000000000000000
     Size.Height = 63.000000000000000000
     Size.PlatformDefault = False
@@ -32,7 +32,7 @@ object frmMain: TfrmMain
     Size.Height = 42.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
-    object btnReset: TButton
+    object buttonReset: TButton
       Enabled = False
       Position.X = 184.000000000000000000
       Position.Y = 8.000000000000000000
@@ -40,15 +40,14 @@ object frmMain: TfrmMain
       Text = 'Reset'
       TextSettings.Trimming = None
     end
-    object btnStart: TButton
+    object buttonStart: TButton
       Position.X = 8.000000000000000000
       Position.Y = 8.000000000000000000
-      StyleLookup = 'btnStartStyle1'
       TabOrder = 3
       Text = 'Start'
       TextSettings.Trimming = None
     end
-    object btnStop: TButton
+    object buttonStop: TButton
       Enabled = False
       Position.X = 96.000000000000000000
       Position.Y = 8.000000000000000000
@@ -57,38 +56,81 @@ object frmMain: TfrmMain
       TextSettings.Trimming = None
     end
   end
-  object ltTop: TLayout
+  object layoutTop: TLayout
     Align = Top
     Size.Width = 273.000000000000000000
     Size.Height = 34.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 2
-    object crclWork: TCircle
-      Position.X = 8.000000000000000000
+    object circleRest: TCircle
+      Fill.Color = xFFFC0000
+      Opacity = 0.200000002980232200
+      Position.X = 26.000000000000000000
       Position.Y = 8.000000000000000000
       Size.Width = 13.000000000000000000
       Size.Height = 18.000000000000000000
       Size.PlatformDefault = False
+      Stroke.Thickness = 0.000000000000000000
     end
-    object Circle1: TCircle
-      Position.X = 96.000000000000000000
+    object labelRest: TLabel
+      StyledSettings = [Family, Size]
+      Opacity = 0.200000002980232200
+      Position.X = 45.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 35.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+      TextSettings.FontColor = xFFFC0000
+      Text = 'Rest'
+      TabOrder = 2
+    end
+    object circlReady: TCircle
+      Fill.Color = xFFFC8200
+      Position.X = 105.000000000000000000
       Position.Y = 8.000000000000000000
       Size.Width = 13.000000000000000000
       Size.Height = 18.000000000000000000
       Size.PlatformDefault = False
-      object Circle2: TCircle
-        Position.X = 88.000000000000000000
-        Size.Width = 13.000000000000000000
-        Size.Height = 18.000000000000000000
-        Size.PlatformDefault = False
-      end
+      Stroke.Thickness = 0.000000000000000000
     end
-  end
-  object StyleBook1: TStyleBook
-    Styles = <
-      item
-      end>
-    Left = 120
-    Top = 56
+    object labelReady: TLabel
+      StyledSettings = [Family, Size]
+      Position.X = 124.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 47.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+      TextSettings.FontColor = xFFFC8200
+      Text = 'Ready'
+      TabOrder = 1
+    end
+    object circleWork: TCircle
+      Fill.Color = xFF00D039
+      Opacity = 0.200000002980232200
+      Position.X = 193.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 13.000000000000000000
+      Size.Height = 18.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Thickness = 0.000000000000000000
+    end
+    object labelWork: TLabel
+      StyledSettings = [Family, Size]
+      Opacity = 0.200000002980232200
+      Position.X = 212.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 35.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+      TextSettings.FontColor = xFF00D039
+      Text = 'Work'
+      TabOrder = 0
+    end
   end
 end

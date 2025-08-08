@@ -3,12 +3,12 @@ program Tomato;
 uses
   System.StartUpCopy,
   FMX.Forms,
-  Main in 'Main.pas' {frmMain};
+  Main in 'Main.pas' {formMain};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TfrmMain, frmMain);
+  Application.CreateForm(TformMain, formMain);
   Application.Run;
 end.
