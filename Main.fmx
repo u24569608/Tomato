@@ -146,27 +146,32 @@ object formMain: TformMain
     Top = 64
     object menuItemAction: TMenuItem
       Text = 'Action'
-      object menuItemStart: TMenuItem
+      object menuItemSettings: TMenuItem
         Locked = True
-        Text = 'menuItemStart'
+        Text = 'Settings'
       end
-      object menuItemStop: TMenuItem
-        Locked = True
-        Text = 'menuItemStop'
-      end
-      object menuItemReset: TMenuItem
-        Locked = True
-        Text = 'menuItemReset'
-      end
-    end
-    object menuItemSettings: TMenuItem
-      Text = 'Settings'
     end
     object menuItemHelp: TMenuItem
       Text = 'Help'
       object menuItemAbout: TMenuItem
         Locked = True
         Text = 'About'
+      end
+    end
+    object menuItemTimer: TMenuItem
+      Locked = True
+      Text = 'Timer'
+      object menuItemStart: TMenuItem
+        Locked = True
+        Text = 'Start'
+      end
+      object menuItemStop: TMenuItem
+        Locked = True
+        Text = 'Stop'
+      end
+      object menuItemReset: TMenuItem
+        Locked = True
+        Text = 'Reset'
       end
     end
   end

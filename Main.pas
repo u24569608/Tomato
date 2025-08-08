@@ -32,6 +32,7 @@ type
     menuItemStart: TMenuItem;
     menuItemStop: TMenuItem;
     menuItemReset: TMenuItem;
+    menuItemTimer: TMenuItem;
     procedure buttonStartClick(Sender: TObject);
     procedure buttonStopClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
