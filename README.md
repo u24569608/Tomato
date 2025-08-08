@@ -8,3 +8,7 @@ Whether you’re tackling deep work, studying, or managing daily tasks, Tomato h
 - Minimalist window design to reduce distractions.
 - Option to keep the timer window always on top or run in the background.
 - Customisable work and rest durations to fit your personal productivity style.
+
+### Platform Availability
+- macOS
+- Windows
