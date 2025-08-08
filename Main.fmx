@@ -167,16 +167,21 @@ object formMain: TformMain
         Locked = True
         ShortCut = 4161
         Text = 'Start'
+        OnClick = menuItemStartClick
       end
       object menuItemStop: TMenuItem
+        Enabled = False
         Locked = True
         ShortCut = 4176
         Text = 'Stop'
+        OnClick = menuItemStopClick
       end
       object menuItemReset: TMenuItem
+        Enabled = False
         Locked = True
         ShortCut = 4178
         Text = 'Reset'
+        OnClick = menuItemResetClick
       end
     end
   end

@@ -37,6 +37,9 @@ type
     procedure buttonStopClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure buttonResetClick(Sender: TObject);
+    procedure menuItemResetClick(Sender: TObject);
+    procedure menuItemStartClick(Sender: TObject);
+    procedure menuItemStopClick(Sender: TObject);
   private
     { Private declarations }
     bWorking : Boolean;
@@ -82,6 +85,24 @@ begin
    bResting := False;
 end;
 
+procedure TformMain.menuItemResetClick(Sender: TObject);
+begin
+  // Main Menu: Reset
+  Reset();
+end;
+
+procedure TformMain.menuItemStartClick(Sender: TObject);
+begin
+   // Main Menu: Start
+   Start();
+end;
+
+procedure TformMain.menuItemStopClick(Sender: TObject);
+begin
+   // Main Menu: Stop/Pause
+   Stop();
+end;
+
 procedure TformMain.Reset;
 begin
   // Reset Procedure
@@ -89,6 +110,10 @@ begin
   buttonStart.Enabled := True;
   buttonStop.Enabled := False;
   buttonReset.Enabled := False;
+
+  menuItemStart.Enabled := True;
+  menuitemStop.Enabled := False;
+  menuitemReset.Enabled := False;
 
   labelTimer.Text := '00:45:00';
 
@@ -110,6 +135,10 @@ begin
   buttonStart.Enabled := False;
   buttonStop.Enabled := True;
   buttonReset.Enabled := True;
+
+  menuItemStart.Enabled := False;
+  menuitemStop.Enabled := True;
+  menuitemReset.Enabled := True;
 
   circleReady.Opacity := 0.2;
   labelReady.Opacity := 0.2;
@@ -133,6 +162,8 @@ begin
   // Stop Procedure
 
   buttonStart.Enabled := True;
+
+  menuItemStart.Enabled := True;
 
   circleWork.Opacity := 0.2;
   labelWork.Opacity := 0.2;
