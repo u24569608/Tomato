@@ -20,7 +20,7 @@ object formMain: TformMain
     Size.Width = 273.000000000000000000
     Size.Height = 63.000000000000000000
     Size.PlatformDefault = False
-    TextSettings.Font.Size = 36.000000000000000000
+    TextSettings.Font.Size = 48.000000000000000000
     TextSettings.HorzAlign = Center
     Text = '00:45:00'
     TabOrder = 0
