@@ -97,7 +97,8 @@ end;
 procedure TformMain.menuItemSettingsClick(Sender: TObject);
 begin
   // Settings
-
+  // Open the Settings Form
+  formSettings.Show;
 end;
 
 procedure TformMain.menuItemStartClick(Sender: TObject);

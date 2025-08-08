@@ -169,6 +169,10 @@
             <Form>formMain</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="Settings.pas">
+            <Form>formSettings</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

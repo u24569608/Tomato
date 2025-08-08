@@ -9,7 +9,7 @@ uses
 
 type
   TformSettings = class(TForm)
-    S: TTabControl;
+    tabControlSettings: TTabControl;
     tabItemGeneral: TTabItem;
     tabItemTimeSettings: TTabItem;
     checkBoxStaysOnTop: TCheckBox;
@@ -22,6 +22,7 @@ type
     buttonRestTime: TButton;
     labelWorkTime: TLabel;
     labelRestTime: TLabel;
+    procedure buttonRestTimeClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,5 +37,12 @@ implementation
 {$R *.fmx}
 
 uses Main;
+
+procedure TformSettings.buttonRestTimeClick(Sender: TObject);
+begin
+  // Reset Timer Settings to Default
+  workTime.Time := StrToTime('00:45:00');
+  restTime.Time := StrToTime('00:15:00');
+end;
 
 end.

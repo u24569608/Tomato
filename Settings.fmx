@@ -1,32 +1,36 @@
 object formSettings: TformSettings
   Left = 0
   Top = 0
-  Caption = 'Form1'
-  ClientHeight = 176
+  BorderIcons = [biSystemMenu, biMaximize]
+  BorderStyle = Single
+  Caption = 'Settings'
+  ClientHeight = 185
   ClientWidth = 273
+  Position = Default
+  Quality = HighQuality
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 1
-  object S: TTabControl
+  object tabControlSettings: TTabControl
     Align = Client
     Size.Width = 273.000000000000000000
-    Size.Height = 141.000000000000000000
+    Size.Height = 144.000000000000000000
     Size.PlatformDefault = False
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 0
     TabPosition = PlatformDefault
     Sizes = (
       273s
-      115s
+      118s
       273s
-      115s)
+      118s)
     object tabItemGeneral: TTabItem
       CustomIcon = <
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = True
+      IsSelected = False
       Size.Width = 65.000000000000000000
       Size.Height = 26.000000000000000000
       Size.PlatformDefault = False
@@ -55,7 +59,7 @@ object formSettings: TformSettings
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = False
+      IsSelected = True
       Size.Width = 53.000000000000000000
       Size.Height = 26.000000000000000000
       Size.PlatformDefault = False
@@ -101,6 +105,7 @@ object formSettings: TformSettings
         TabOrder = 1
         Text = 'Reset to Default'
         TextSettings.Trimming = None
+        OnClick = buttonRestTimeClick
       end
       object labelWorkTime: TLabel
         Position.X = 9.000000000000000000
@@ -118,16 +123,16 @@ object formSettings: TformSettings
   end
   object panelBottom: TPanel
     Align = Bottom
-    Position.Y = 141.000000000000000000
+    Position.Y = 144.000000000000000000
     Size.Width = 273.000000000000000000
-    Size.Height = 35.000000000000000000
+    Size.Height = 41.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 2
+    TabOrder = 1
     object buttonSave: TButton
       Default = True
       Position.X = 185.000000000000000000
-      Position.Y = 8.000000000000000000
-      TabOrder = 1
+      Position.Y = 10.000000000000000000
+      TabOrder = 0
       Text = 'Save'
       TextSettings.Trimming = None
     end
