@@ -13,6 +13,7 @@ object formMain: TformMain
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
   DesignerMasterStyle = 1
   object labelTimer: TLabel
     Align = Client
@@ -39,6 +40,7 @@ object formMain: TformMain
       TabOrder = 2
       Text = 'Reset'
       TextSettings.Trimming = None
+      OnClick = buttonResetClick
     end
     object buttonStart: TButton
       Position.X = 8.000000000000000000
@@ -46,6 +48,7 @@ object formMain: TformMain
       TabOrder = 3
       Text = 'Start'
       TextSettings.Trimming = None
+      OnClick = buttonStartClick
     end
     object buttonStop: TButton
       Enabled = False
@@ -54,6 +57,7 @@ object formMain: TformMain
       TabOrder = 1
       Text = 'Stop'
       TextSettings.Trimming = None
+      OnClick = buttonStopClick
     end
   end
   object layoutTop: TLayout
@@ -86,7 +90,7 @@ object formMain: TformMain
       Text = 'Rest'
       TabOrder = 2
     end
-    object circlReady: TCircle
+    object circleReady: TCircle
       Fill.Color = xFFFC8200
       Position.X = 105.000000000000000000
       Position.Y = 8.000000000000000000
@@ -132,5 +136,9 @@ object formMain: TformMain
       Text = 'Work'
       TabOrder = 0
     end
+  end
+  object timerCountdown: TTimer
+    Left = 120
+    Top = 56
   end
 end
