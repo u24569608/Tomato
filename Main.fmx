@@ -148,6 +148,7 @@ object formMain: TformMain
       Text = 'Action'
       object menuItemSettings: TMenuItem
         Locked = True
+        ShortCut = 12368
         Text = 'Settings'
       end
     end
@@ -155,6 +156,7 @@ object formMain: TformMain
       Text = 'Help'
       object menuItemAbout: TMenuItem
         Locked = True
+        ShortCut = 112
         Text = 'About'
       end
     end
@@ -163,14 +165,17 @@ object formMain: TformMain
       Text = 'Timer'
       object menuItemStart: TMenuItem
         Locked = True
+        ShortCut = 4161
         Text = 'Start'
       end
       object menuItemStop: TMenuItem
         Locked = True
+        ShortCut = 4176
         Text = 'Stop'
       end
       object menuItemReset: TMenuItem
         Locked = True
+        ShortCut = 4178
         Text = 'Reset'
       end
     end
