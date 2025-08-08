@@ -59,8 +59,7 @@ end;
 procedure TformSettings.FormActivate(Sender: TObject);
 begin
   // Get Work/Rest Time from File and Populate Timer
-  workTime.Time := GetWorkTime();
-  restTime.Time := GetRestTime();
+  
 end;
 
 function TformSettings.GetRestTime: TTime;
