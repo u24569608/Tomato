@@ -36,3 +36,4 @@ Win32/
 info.plist.TemplateOSX.xml
 Entitlement.TemplateOSX.xml
 
+*.res
