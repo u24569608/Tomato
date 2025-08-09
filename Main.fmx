@@ -14,7 +14,7 @@ object formMain: TformMain
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
-  DesignerMasterStyle = 1
+  DesignerMasterStyle = 0
   object labelTimer: TLabel
     Align = Client
     StyledSettings = [Family, Style]
@@ -77,14 +77,14 @@ object formMain: TformMain
       Stroke.Thickness = 0.000000000000000000
     end
     object labelRest: TLabel
-      StyledSettings = [Family, Size]
+      StyledSettings = [Family]
       Opacity = 0.200000002980232200
       Position.X = 45.000000000000000000
       Position.Y = 8.000000000000000000
       Size.Width = 35.000000000000000000
       Size.Height = 17.000000000000000000
       Size.PlatformDefault = False
-      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.Font.Size = 14.000000000000000000
       TextSettings.Font.StyleExt = {00060000000000000004000000}
       TextSettings.FontColor = xFFFC0000
       Text = 'Rest'
@@ -100,13 +100,13 @@ object formMain: TformMain
       Stroke.Thickness = 0.000000000000000000
     end
     object labelReady: TLabel
-      StyledSettings = [Family, Size]
+      StyledSettings = [Family]
       Position.X = 124.000000000000000000
       Position.Y = 8.000000000000000000
       Size.Width = 47.000000000000000000
       Size.Height = 17.000000000000000000
       Size.PlatformDefault = False
-      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.Font.Size = 14.000000000000000000
       TextSettings.Font.StyleExt = {00060000000000000004000000}
       TextSettings.FontColor = xFFFC8200
       Text = 'Ready'
@@ -123,14 +123,14 @@ object formMain: TformMain
       Stroke.Thickness = 0.000000000000000000
     end
     object labelWork: TLabel
-      StyledSettings = [Family, Size]
+      StyledSettings = [Family]
       Opacity = 0.200000002980232200
       Position.X = 212.000000000000000000
       Position.Y = 8.000000000000000000
       Size.Width = 35.000000000000000000
       Size.Height = 17.000000000000000000
       Size.PlatformDefault = False
-      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.Font.Size = 14.000000000000000000
       TextSettings.Font.StyleExt = {00060000000000000004000000}
       TextSettings.FontColor = xFF00D039
       Text = 'Work'

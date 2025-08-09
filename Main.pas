@@ -6,8 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Controls.Presentation, System.Math.Vectors, FMX.Controls3D, FMX.Layers3D,
-  FMX.Layouts, FMX.Objects,  Macapi.AppKit, Macapi.ObjectiveC, Macapi.CocoaTypes,
-  Macapi.Foundation, FMX.Platform.Mac, FMX.Menus;
+  FMX.Layouts, FMX.Objects, FMX.Menus;
 
 type
   TformMain = class(TForm)
@@ -46,7 +45,7 @@ type
     { Private declarations }
     bWorking, bResting : Boolean;
     iRemainingTime, iNextDuration : Integer;
-
+    procedure SetShortCuts();
   public
     { Public declarations }
     procedure Start();
@@ -97,6 +96,10 @@ begin
 
   iRemainingTime := (45 * 60);
   iNextDuration := (15 * 60);
+
+  {$IFDEF MSWINDOWS}
+    SetShortCuts;
+  {$ENDIF}
 end;
 
 procedure TformMain.menuItemResetClick(Sender: TObject);
@@ -171,6 +174,19 @@ begin
 
   circleReady.Opacity := 0.2;
   labelReady.Opacity := 0.2;
+end;
+
+procedure TformMain.SetShortCuts;
+begin
+ {$IFDEF MSWINDOWS}
+    with menuMain do
+      begin
+        menuItemSettings.ShortCut := TextToShortCut('Ctrl+Shift+P');
+        menuItemStart.ShortCut := TextToShortCut('Ctrl+A');
+        menuItemStop.ShortCut := TextToShortCut('Ctrl+P');
+        menuItemReset.ShortCut := TextToShortCut('Ctrl+R');
+      end;
+  {$ENDIF}
 end;
 
 procedure TformMain.SetWorkStatus;
