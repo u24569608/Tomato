@@ -138,12 +138,12 @@ object formMain: TformMain
     end
   end
   object timerCountdown: TTimer
-    Left = 96
-    Top = 56
+    Left = 8
+    Top = 48
   end
   object menuMain: TMainMenu
-    Left = 128
-    Top = 64
+    Left = 40
+    Top = 48
     object menuItemAction: TMenuItem
       Text = 'Action'
       object menuItemSettings: TMenuItem
