@@ -52,7 +52,12 @@ type
     procedure Start();
     procedure Stop();
     procedure Reset();
+
     procedure UpdateLabel();
+
+    procedure SetReadyStatus();
+    procedure SetWorkStatus();
+    procedure SetRestStatus();
   end;
 
 var
@@ -87,8 +92,8 @@ end;
 
 procedure TformMain.FormCreate(Sender: TObject);
 begin
-   bWorking := True;
-   bResting := False;
+  bWorking := True;
+  bResting := False;
 
   iRemainingTime := (45 * 60);
   iNextDuration := (15 * 60);
@@ -132,6 +137,19 @@ begin
   menuitemReset.Enabled := False;
 
 
+  SetReadyStatus();
+
+  timerCountdown.Enabled := False;
+
+  iRemainingTime := (45 * 60);
+  iNextDuration := (15 * 60);
+
+  UpdateLabel;
+end;
+
+procedure TformMain.SetReadyStatus;
+begin
+  // Set Ready Status
   circleWork.Opacity := 0.2;
   labelWork.Opacity := 0.2;
 
@@ -140,13 +158,32 @@ begin
 
   circleReady.Opacity := 1;
   labelReady.Opacity := 1;
+end;
 
-  timerCountdown.Enabled := True;
+procedure TformMain.SetRestStatus;
+begin
+  // Set Rest Status
+  circleWork.Opacity := 0.2;
+  labelWork.Opacity := 0.2;
 
-  iRemainingTime := (45 * 60);
-  iNextDuration := (15 * 60);
+  circleRest.Opacity := 1;
+  labelRest.Opacity := 1;
 
-  UpdateLabel;
+  circleReady.Opacity := 0.2;
+  labelReady.Opacity := 0.2;
+end;
+
+procedure TformMain.SetWorkStatus;
+begin
+  // Set Work Status
+  circleWork.Opacity := 1;
+  labelWork.Opacity := 1;
+
+  circleRest.Opacity := 0.2;
+  labelRest.Opacity := 0.2;
+
+  circleReady.Opacity := 0.2;
+  labelReady.Opacity := 0.2;
 end;
 
 procedure TformMain.Start;
@@ -161,22 +198,19 @@ begin
   menuitemStop.Enabled := True;
   menuitemReset.Enabled := True;
 
-  circleReady.Opacity := 0.2;
-  labelReady.Opacity := 0.2;
+  SetWorkStatus();
 
   if (bWorking = True) then
     begin
-      circleWork.Opacity := 1;
-      labelWork.Opacity := 1;
+      SetWorkStatus();
     end
   else
   if (bResting = True) then
     begin
-      circleRest.Opacity := 1;
-      labelRest.Opacity := 1;
+      SetRestStatus();
     end;
 
-  timerCountdown.Enabled := False;
+  timerCountdown.Enabled := True;
 end;
 
 procedure TformMain.Stop;
@@ -187,15 +221,9 @@ begin
 
   menuItemStart.Enabled := True;
 
-  circleWork.Opacity := 0.2;
-  labelWork.Opacity := 0.2;
+  SetReadyStatus();
 
-  circleRest.Opacity := 0.2;
-  labelRest.Opacity := 0.2;
-
-  circleReady.Opacity := 1;
-  labelReady.Opacity := 1;
-
+  timerCountdown.Enabled := False;
 end;
 
 procedure TformMain.timerCountdownTimer(Sender: TObject);
@@ -209,14 +237,20 @@ begin
       if (iNextDuration = (15 * 60)) then
         begin
           iNextDuration := (45 * 60);
+          SetWorkStatus();
+          bWorking := True;
+          bResting := False;
         end
       else
         begin
           iNextDuration := (15 * 60);
+          SetRestStatus();
+          bWorking := False;
+          bResting := True;
         end;
 
       // Update the label
-      UpdateLabel;
+      UpdateLabel();
 
       // Skip decrement for full duration display
       Exit;
@@ -226,7 +260,7 @@ begin
   Dec(iRemainingTime);
 
   // Update the label
-  UpdateLabel;
+  UpdateLabel();
 end;
 
 procedure TformMain.UpdateLabel;
