@@ -138,6 +138,8 @@ object formMain: TformMain
     end
   end
   object timerCountdown: TTimer
+    Enabled = False
+    OnTimer = timerCountdownTimer
     Left = 8
     Top = 48
   end
